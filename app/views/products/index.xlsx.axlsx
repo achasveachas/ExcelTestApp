@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Products") do |sheet|
+    @products.each do |prod|
+        sheet.add_row [prod.title, prod.price]
+    end
+end
